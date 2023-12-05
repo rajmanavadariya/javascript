@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <center>
+    <h2>Special Offer Check : </h2>
+    <label for="">Num Purchases :</label>
+    <input type="text" name="" id="inp-1"><br><br>
+    <label for="">Num Purchases :</label>
+    <input type="text" name="" id="inp-2">
+
+    <h1 id="ans"></h1>
+</center>
+</body>
+</html>
+
+<script>
+    let numPurchases = document.getElementById("inp-1").value
+    let totalSpending = document.getElementById("inp-2").value
+
+    if(numPurchases == "" && totalSpending == "")
+    {
+        document.getElementById("ans").innerHTML = ""
+    }
+    else
+    {
+        if(numPurchases >= 3 && totalSpending >=100)
+        {
+            document.getElementById("ans").innerHTML = "Congratulations! You are eligible for a special offer."
+        }
+        else
+        {
+            document.getElementById("ans").innerHTML = "Sorry! You are not eligible for the special offer."
+        }
+    }
+</script>
