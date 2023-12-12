@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter any 3 number</label>
+    <input type="text" name="" id="num">
+</body>
+</html>
+<script>
+    let a = document.getElementById("num").value
+    let p= 1
+    
+    function productofdigits(){
+        // one= a/100
+        // two=(a%100)/10
+        // three=(a%100)%10
+        // pro=+one* +two* +three
+        // console.log(parseInt(pro))
+        while(a>0){
+            // // a=a/10
+            // one=a%10
+            // pro=pro*one
+            // console.log(pro)
+            p*=a%10
+            a=parseInt(a/10)
+            console.log(parseInt(p))
+        }
+    }
+    productofdigits();
+</script>

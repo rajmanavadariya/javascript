@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q-1</title>
+  </head>
+  <body>
+    <label>Enter any number</label>
+    <input type="text" name="" id="num">
+  </body>
+</html>
+
+<script>
+  let sum = 0;
+  let a=document.getElementById("num").value;
+
+  function sumOfDigits() {
+    while (a > 0) {
+      sum += a % 10;
+      a=parseInt(a/10);
+    }
+    console.log(parseInt(sum));
+  }
+
+  sumOfDigits();
+</script>

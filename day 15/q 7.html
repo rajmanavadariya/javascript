@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Q-7</title>
+</head>
+<body>
+	<label>Enter any number for find odd numbers</label>
+    <input type="text" name="" id="num">
+</body>
+</html>
+<script type="text/javascript">
+	
+	let num = document.getElementById("num").value
+	function printOddNumbers()
+	{
+		for(let i = 1 ; i <= num ; i++)
+		{
+            if(i % 2 != 0){
+
+                console.log(i)
+
+            }
+			
+		}
+	}
+	printOddNumbers()
+</script>
