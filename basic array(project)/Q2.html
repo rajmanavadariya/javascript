@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+    let array=[5,2,10,8,7,6,3,4,8]
+    
+    let number=array.filter((el)=>{
+        return el%2==0
+    })
+    console.log(number);
+
+    let squares=number.map((a)=>{
+        return a*a
+    })
+    console.log(squares);
+
+    let sum =squares.reduce((a,b)=>{
+        return a+b
+    })
+    console.log("total number : ",sum)
+</script>
