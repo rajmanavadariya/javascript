@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let book = [
+        {
+            title : "The Post Office",
+            author : "Rabindra Nath Tagore",
+            price : 50,
+            quantityAvailable : 3 
+        },
+        {
+            title : "Malgudi day",
+            author : "R K Narayan",
+            price : 90,
+            quantityAvailable : 5
+        },
+        {
+            title : "The private life of an indian prince",
+            author : "Mulk Raj Anand",
+            price : 40,
+            quantityAvailable : 0
+        },
+    ]
+
+    let array = []
+    for(let i = 0 ; i < book.length ; i++)
+    {
+        if(book[i].price < 60 && book[i].quantityAvailable != 0)
+        {
+            array.push(book[i].title)
+        }
+    }
+    console.log(array)
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

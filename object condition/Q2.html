@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let quotes = [
+        {
+            text : "Be yourself; everyone else is already taken.",
+            author : "oskar wilde",
+            category : "success",
+        },
+        {
+            text : "So many books, so little time.",
+            author : "frank zappa",
+            category : "book",
+        },
+        {
+            text : "Education is the most powerful weapon which you can use to change the world.",
+            author : "Nelson Mandela",
+            category : "education",
+        },
+    ]
+
+    let array = []
+    for(let i = 0 ; i < quotes.length ; i++)
+    {
+        if(quotes[i].category === "education")
+        {
+            array.push(quotes[i].text)
+        }
+    }
+    console.log(array)
+
+ </script> 
