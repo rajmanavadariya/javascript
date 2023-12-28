@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+let lib = [
+        {
+            title : "The White Tiger",
+            author : "Arvind Adiga",
+            year : 2008,
+        },
+        {
+            title : "Malgudi day",
+            author : "R K Narayan",
+            year : 1943,
+        },
+        {
+            title : "The private life of an indian prince",
+            author : "Mulk Raj Anand",
+            year :  2005
+        },
+        {
+            title : "The money Boy",
+            author : "hery hook",
+            year :  1996
+        }
+    ]
+    
+    function abc(lib, year) {
+
+    let fil = lib.filter(book => book.year < year);
+    
+    let tit = fil.map(book => book.title);
+  
+    return tit;
+   
+  }
+
+  let bok = abc(lib, 2000);
+  console.log(bok);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
