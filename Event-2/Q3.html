@@ -1,0 +1,64 @@
+<!DOCTYPE html> 
+<html>
+ <head>
+  
+ <title>4</title>
+ </head> 
+<body>
+ 
+<h1 id="firstname">Your FirstName</h1>
+   
+<div id="lastname">
+
+Your LastName  </div>
+  
+<p id="fullname">Your First&LastName</p>
+ 
+<hr/>
+   
+<button onclick="setFirstName()">FIRSTNAME</button>
+
+<button onclick="setLastName()">LASTNAME</button>
+ 
+<button onclick="setFullName()">FIRSTNAME NAME</button> 
+
+<button onclick="resetDefaults()">RESET DEFAULTS</button>
+ 
+
+</body>
+</html>
+
+<script>
+
+
+
+let firstname = "Raj"
+let lastname = "Manavadariya"
+let fullname = firstname + lastname
+
+function setFirstName(){
+   document.getElementById("firstname").innerText=firstname
+}     
+ 
+    
+function setLastName() {
+    document.getElementById('lastname').innerHTML = lastname    
+}
+ 
+      
+ 
+function setFullName() {    
+    document.getElementById('fullname').innerHTML = fullname 
+}
+ 
+      
+ 
+ 
+function resetDefaults(){
+    firstname = document.getElementById("firstname").innerHTML=""  
+    lastnamestname = document.getElementById("lastname").innerHTML=""
+    fullname = document.getElementById("fullname").innerHTML=""  
+ 
+}
+  
+</script>

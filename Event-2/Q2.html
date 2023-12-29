@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <center>
+        <h1>Calculator</h1>
+
+        <label for="">Enter First Value : </label>
+        <input type="text" placeholder="Enter Value" id="Value1">
+        <br><br><br>
+
+        <label for="">Enter Second Value : </label>
+        <input type="text" placeholder="Enter Value" id="Value2">
+        <br><br><br>
+
+        <label for="">Enter Third Value : </label>
+        <input type="text" placeholder="Enter Value" id="Value3">
+        <br><br><br>
+
+        <label for="">Enter fourth Value : </label>
+        <input type="text" placeholder="Enter Value" id="Value4">
+        
+        <hr>
+          <h1 id="ans"></h1>
+        <hr>
+        <br>
+        <br>
+
+
+        <button id="add">Addition</button>
+        <button id="sub">subtraction</button>
+        <button id="multiply">multiplication</button>
+        
+    </center>
+</body>
+</html>
+
+<script>
+    document.getElementById("add").addEventListener("click",ad)
+
+    function ad(){
+        let a = document.getElementById("Value1").value
+        let b = document.getElementById("Value2").value
+        let c = document.getElementById("Value3").value
+        let d = document.getElementById("Value4").value
+
+        let sum = +a + +b + +c + +d
+
+        document.getElementById("ans").innerHTML = "sum of fourth number is : " +sum
+    }
+
+
+    // Subtraction
+
+    document.getElementById("sub").addEventListener("click",ad2)
+
+function ad2(){
+    let a = document.getElementById("Value1").value
+    let b = document.getElementById("Value2").value
+    let c = document.getElementById("Value3").value
+    let d = document.getElementById("Value4").value
+
+    let sub = +a - +b - +c - +d
+
+    document.getElementById("ans").innerHTML = "Sub of fourth number is : " +sub
+}
+
+
+
+
+    // Multiplication
+
+
+
+    document.getElementById("multiply").addEventListener("click",ad3)
+
+function ad3(){
+    let a = document.getElementById("Value1").value
+    let b = document.getElementById("Value2").value
+    let c = document.getElementById("Value3").value
+    let d = document.getElementById("Value4").value
+
+    let mul = +a * +b * +c * +d
+
+    document.getElementById("ans").innerHTML = "Multiplication of fourth number is : " +mul
+}
+</script>
