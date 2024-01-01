@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function vote(check){
+        if(vote < 18){
+            throw new Error("Please enter valid age")
+        }else{
+            console.log("Not eligible to vote",check)
+        }
+    }
+
+
+    try{
+        vote("17")
+    }catch(r){
+        console.log("Error : ",r.message)
+    }
+
+</script>

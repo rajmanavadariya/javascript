@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+    function number(num1,num2){
+        if(num2 < 0){
+            throw new Error("Number not divisible by 0")
+        }else{
+            console.log("your number is divisible :",num1,num2)
+        }
+    }
+
+
+    try{
+        number(16,-5)
+    }catch(r){
+        console.log("Error : ",r.message)
+    }
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+    function valid(email){
+        if(!email.includes("@")){
+            throw new Error("Please check Email '@")
+        }else{
+            console.log("Email Sucessfully done",email)
+        }
+    }
+
+
+    try{
+        valid("Export.com")
+    }catch(r){
+        console.log("Error : ",r.message)
+    }
+
+</script>

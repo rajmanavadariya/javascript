@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function enter(form){
+        if(form === ""){
+            throw new Error("Please enter valid details")
+        }else{
+            console.log("form Sucessfully done",form)
+        }
+    }
+
+
+    try{
+        enter("")
+    }catch(r){
+        console.log("Error : ",r.message)
+    }
+
+</script>
