@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <center>
+        <form action="" id="sign">
+
+            <label for="">Enter Your Name :</label>
+            <input type="text" id="nam" placeholder="enter your name">
+            <br><br><br>
+
+            <label for="">Enter Your Email :</label>
+            <input type="text" id="em" placeholder="enter your email">
+            <br><br><br>
+
+            <label for="">Enter Your phoneNumber :</label>
+            <input type="text" id="pn" placeholder="enter your number">
+            <br><br><br>
+
+            <label for="">Password:</label>
+            <input type="password" id="psw" placeholder="enter your password">
+            <br><br><br>
+
+            <label for="">Confirm Password:</label>
+            <input type="password" id="cp" placeholder="enter your confirm password">
+            <br><br><br>
+
+            <span id="err" style="color: red; font-weight: bold;"></span>
+            <br><br>
+
+            <button type="submit" id="clk">Submit</button>
+
+        </form>
+    </center>
+</body>
+</html>
+
+
+
+<script>
+    document.getElementById("sign").onsubmit = function(evn){
+        try{
+            var name = document.getElementById("nam").value 
+            var email = document.getElementById("em").value 
+            var number = document.getElementById("pn").value 
+            var pass = document.getElementById("psw").value 
+            var cppass = document.getElementById("cp").value 
+
+            if(/\d/.test(name)){
+                 throw new Error("Invalid Name")
+            }
+            if(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email)){
+                throw new Error("Invalid Email")
+            }
+            if(!/^\d{10}$/.test(number)){
+                throw new Error("Invalid Number")
+            }
+            if(pass!=cppass){
+                throw new Error("Invalid Password")
+            }
+            alert("SuccessFully Done")
+
+        }
+
+        catch(e){
+            event.preventDefault();
+            document.getElementById("err").innerHTML = e.message
+        }
+    }
+</script>
