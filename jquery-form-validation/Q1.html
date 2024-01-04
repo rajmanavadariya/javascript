@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form action="" id="signup">
+        <label for="">Enter your name</label>
+        <input type="text" id="nm"><br><br>
+        <label for="">Enter your email</label>
+        <input type="text" id="eml"><br><br>
+        <label for="">Enter your phone number</label>
+        <input type="text" id="numb"><br><br>
+        
+        <label for="">Enter your password</label>
+        <input type="password" id="pw"><br><br>
+        <label for="" >confirm password</label>
+        <input type="password" id="cpw"><br><br>
+        <button id="" type="submit">Submit</button>
+        <br><br>
+        <span id="err" style="color: red;"></span>
+    </form>
+</body>
+</html>
+<script>
+
+    
+    $(document).ready(function(){
+          isValid=true;
+          $("#signup").submit(function(e){
+            var name = $("#nm").val()
+            if(name===""){
+                isValid=false;
+                alert("Enter your name")
+            }
+         var email=$("#eml").val()
+         if(email===""){
+            isValid=false;
+            alert("Enter email address")
+         }else if(!email.endsWith("@gmail.com")){
+            isValid=false;
+            alert("Entering @gmail.com compalsary")  
+         }
+         var mobile=$("#numb").val()
+         var phnrgx=/^\d{10}$/
+         if(mobile==="" || !phnrgx.test(mobile)){
+            isValid=false;
+            alert("Enter valid mobile number")  
+          
+         }
+         var password=$("pw").val()
+         var confirm=$("cpw").val()
+         if(password!=confirm){
+            isValid=false;
+            alert("Enter both password same")  
+           
+         }
+         alert("detailed entered successful")
+   
+          })
+          })
