@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+    class Shape{
+        calculateAria(){
+          
+        }
+    }
+
+    class circle extends Shape{
+        calculateAria(r){
+            return 3.14*r*r
+      }
+    }
+
+    class rectangle extends Shape{
+        calculateAria(l,w){
+            return l*w
+      }
+    }
+
+    class Square extends Shape{
+        calculateAria(s){
+            return s*s
+      }
+    }
+
+
+
+    const newshape = new circle
+    const newshape1 = new rectangle
+    const newshape2 = new Square
+    const result =  newshape.calculateAria(5)
+    const res =  newshape1.calculateAria(4,2)
+    const res1 =  newshape2.calculateAria(5)
+
+    console.log(result)
+    console.log(res)
+    console.log(res1)
+
+
+
+</script>
