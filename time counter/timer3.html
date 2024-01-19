@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> 3 </title>
+
+	<!--Remix Icon CDN-->
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+	<!--Remix Icon CDN-->
+
+	<!--Google Fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Lumanosimo&family=Tektur&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@100&family=Chakra+Petch:wght@300&family=Kanit:wght@100&family=Michroma&family=Ysabeau+SC:wght@200&display=swap" rel="stylesheet">
+	<!--Google Fonts-->
+
+    <link rel="stylesheet" href="timer3.css">
+
+	
+</head>
+<body>
+<header>
+	<div class="sub-head">
+		<i class="ri-home-8-line"></i>
+		<p>REAL ESTATE</p>
+		<h4 id="counter1"></h4>
+		<h5>Stop At 39210</h5>
+	</div>
+	<div class="sub-head">
+		<i class="ri-book-line"></i>
+		<p>BOOKS</p>
+		<h4 id="counter2"></h4>
+		<h5>Stop At 398</h5>
+	</div>
+	<div class="sub-head">
+		<i class="ri-tv-2-line"></i>
+		<p>FURNITURE</p>
+		<h4 id="counter3"></h4>
+		<h5>Stop At 1229</h5>
+	</div>
+	<div class="sub-head">
+		<i class="ri-lightbulb-flash-line"></i>
+		<p>ELECTEONICS</p>
+		<h4 id="counter4"></h4>
+		<h5>Stop At 32891</h5>
+	</div>
+	<div class="sub-head">
+		<i class="ri-roadster-line"></i>
+		<p>VEHICAL</p>
+		<h4 id="counter5"></h4>
+		<h5>Stop At 29221</h5>
+	</div>
+	<div class="sub-head">
+		<i class="ri-restaurant-2-line"></i>
+		<p>OTHER</p>
+		<h4 id="counter6"></h4>
+		<h5>Stop At 219</h5>
+	</div>
+</header>
+</body>
+</html>
+<script type="text/javascript">
+	
+	var counter1 = document.getElementById("counter1")
+	var count1 = 0
+
+	stopcount1=setInterval(()=>{
+	count1 ++
+	counter1.innerHTML=count1
+		if(count1 >= 3921)
+		{
+			function stop1()
+			{
+				clearInterval(stopcount1)
+			}
+			stop1()
+		}
+	},0.1)
+
+// -------------------------------------------------------------------------
+
+	var counter2 = document.getElementById("counter2")
+	var count2 = 0
+
+	stopcount2=setInterval(()=>{
+	count2 ++
+	counter2.innerHTML=count2
+		if(count2 >= 398)
+		{
+			function stop2()
+			{
+				clearInterval(stopcount2)
+			}
+			stop2()
+		}
+	},0.1)
+
+// -------------------------------------------------------------------------
+
+	var counter3 = document.getElementById("counter3")
+	var count3 = 0
+
+	stopcount3=setInterval(()=>{
+	count3 ++
+	counter3.innerHTML=count3
+		if(count3 >= 1229)
+		{
+			function stop3()
+			{
+				clearInterval(stopcount3)
+			}
+			stop3()
+		}
+	},0.1)
+
+// -------------------------------------------------------------------------
+
+	var counter4 = document.getElementById("counter4")
+	var count4 = 0
+
+	stopcount4=setInterval(()=>{
+	count4 ++
+	counter4.innerHTML=count4
+		if(count4 >= 32891)
+		{
+			function stop4()
+			{
+				clearInterval(stopcount4)
+			}
+			stop4()
+		}
+	},0.1)
+
+
+
+	var counter5 = document.getElementById("counter5")
+	var count5 = 0
+
+	stopcount5=setInterval(()=>{
+	count5 ++
+	counter5.innerHTML=count5
+		if(count5 >= 29221)
+		{
+			function stop5()
+			{
+				clearInterval(stopcount5)
+			}
+			stop5()
+		}
+	},0.1)
+
+	var counter6 = document.getElementById("counter6")
+	var count6 = 0
+
+	stopcount6=setInterval(()=>{
+	count6 ++
+	counter6.innerHTML=count6
+		if(count6 >= 219)
+		{
+			function stop6()
+			{
+				clearInterval(stopcount6)
+			}
+			stop6()
+		}
+	},0.1)
+
+</script>

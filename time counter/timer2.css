@@ -1,0 +1,39 @@
+.main{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.submain{
+    width: 60%;
+    height: 350px;
+    background-color: aqua;
+
+}
+.h1{
+    margin-left: 25%;
+}
+.subhi{
+width: 100%;
+height: 250px;
+display: flex;
+/* border: 1px solid black; */
+justify-content: space-evenly;
+
+}
+.subh{
+flex-basis: 20%;
+height: 200px;
+border-radius: 10px;
+background-color: black;
+color: white;
+border: 1px solid black;
+text-align: center;
+}
+h3{
+text-transform: capitalize;
+}

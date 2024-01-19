@@ -1,0 +1,46 @@
+		
+		*{
+			margin: 0;
+			padding: 0;
+			background-color: lightblue;
+		}
+		header{
+			height: 100vh;
+			width: 100%;
+			border: 2px solid black;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		.sub-head{
+			height: 170px;
+			width: 170px;
+			border-radius: 15px;
+			border: 5px solid blue;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			flex-direction: column;
+		}
+		.sub-head i{
+			font-size: 40px;
+			color: blue;
+		}
+		.sub-head p{
+			font-size: 20px;
+			letter-spacing: 3px;
+			font-weight: 900;
+			color: blue;
+			
+			}
+		.sub-head h4{
+			font-size: 30px;
+			letter-spacing: 3px;
+			font-weight: 900;
+			color: blue;
+			
+			}
+		h5{
+			font-size: 25px;
+			color: blue;
+					}

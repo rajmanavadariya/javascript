@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="timer1.css">
+</head>
+<body>
+
+    <center>
+       
+        <h1 id="get">Get 40% off on Holidays Sales</h1>
+        <div class="main">
+            
+            <div class="box1">
+               <h1>02</h1>
+               <p>DAYS</p>
+            </div>
+            <div class="box1">
+                <h1>23</h1>
+                <p>HOURS</p>
+            </div>
+            <div class="box1">
+                 <h1>49</h1>
+                 <p>MINUTES</p>
+            </div>
+            <div class="box1">
+                 <h1 id="countdown">60</h1>
+                 <p>SECONDS</p>
+            </div>
+
+           
+        </div>
+        <button>Grab Now</button>
+    </center>
+    
+</body>
+</html>
+
+
+
+
+<script>
+    var countdown = document.getElementById("countdown")
+    var count = 60;
+    var stop;
+
+
+   stop = setInterval(()=>{
+        count--
+        countdown.innerHTML = count
+        if(count === 0){
+           count=60;
+        }
+    },1000)
+
+   
+
+
+</script>
