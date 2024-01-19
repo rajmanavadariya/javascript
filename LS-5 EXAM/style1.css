@@ -1,0 +1,13 @@
+#cart{
+    display: flex;
+   justify-content: space-between;
+}
+#photo{
+    height: 200px;
+    width: 200px;
+}
+
+#sec1{
+   flex-basis: 30%;
+   text-align: justify;
+}
