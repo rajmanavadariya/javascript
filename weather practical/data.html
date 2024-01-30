@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        input{
+            width: 300px;
+            height: 40px;
+            box-shadow: 1px 5px 6px 2px gray;
+            border: 0;
+        }
+
+        ::placeholder{
+            font-size: 20px;
+        }
+
+        button{
+            padding: 5px 30px;
+            font-size: 30px;
+            /* margin-top: 10px; */
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="search" placeholder="Search">
+    <button onclick="show()">search</button>
+    <div id="box"></div>
+</body>
+</html>
+<script>
+
+
+    function show(){
+let name=document.getElementById("search").value
+let api = "3be844aeecdcdef9391928261a223e33"
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=${api}&`)
+        .then(function(res){
+         return res.json()
+        })
+        .then(function(json){
+         console.log(json)
+         displaymovie(json)
+        })
+    }
+    function displaymovie(json){
+let mintemp = document.createElement("h1")
+mintemp.innerHTML="temp-min :" + json.main.temp_min
+
+
+let title = document.createElement("h1")
+title.innerHTML="Temp-max : " + json.main.temp_max
+
+let win= document.createElement("h1")
+win.innerHTML="Wind : " + json.wind.deg
+
+let wind1= document.createElement("p")
+wind1.innerHTML="Gust : " + json.wind.gust
+
+let wind2= document.createElement("p")
+wind2.innerHTML= "Speed : " + json.wind.speed
+
+let cloud= document.createElement("h1")
+cloud.innerHTML="Cloud : " + json.clouds.all
+
+let sys= document.createElement("h1")
+sys.innerHTML="Sunrise : " + json.sys.sunrise
+
+let sys1= document.createElement("h1")
+sys1.innerHTML="Sunset : " + json.sys.sunset
+
+let time= document.createElement("h1")
+time.innerHTML="TimeZone : " + json.timezone
+
+
+
+let vis= document.createElement("h1")
+vis.innerHTML="Visibility : " + json.visibility
+
+
+
+
+
+
+
+document.querySelector("#box").append(mintemp,title,win,wind1,wind2,cloud,sys,sys1,time,vis)
+
+    }
+</script>
