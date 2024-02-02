@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #search{
+            background-color: lime;
+            color: red;
+        }
+        #box{
+            /* margin-left: 60%; */
+            width: 100%;
+            background-color: green;
+            color: red;
+            height: 1000VH;
+        }
+  
+   </style>
+</head>
+<body>
+
+    <center>
+    
+         <input type="text" id="search" placeholder="Search">
+         <button onclick="show()">search</button>
+         <div id="box"></div>
+    </center>
+</body>
+</html>
+<script>
+
+
+    function show(){
+
+
+        fetch(`https://data.covid19india.org/v4/min/data.min.json`)
+        .then(function(res){
+         return res.json()
+        })
+        .then(function(json){
+         console.log(json)
+         displaymovie(json)
+        })
+    }
+    function displaymovie(json){
+        let name=document.getElementById("search").value
+        let rec = document.createElement("h1")
+        let res1 = document.createElement("h1")
+        let rec2 = document.createElement("h1")
+
+for(i in json){
+
+   
+    if(i===name){
+       
+        rec.innerHTML = "Confermed : " +  json[i].delta7.confirmed
+        res1.innerHTML = "delta21_14 Confirmed : " +  json[i].delta21_14.confirmed
+        rec2.innerHTML = "Total Confermed : " +  json[i].total.confirmed
+
+        
+    }
+
+  
+}
+
+
+document.querySelector("#box").append(rec,res1,rec2)
+
+
+
+    }
+</script>
+
+
+
